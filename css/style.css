@@ -1,0 +1,110 @@
+/* Defining Variables */
+:root {
+	--primary-color: #48FF00;
+	--secondary-color: #39C800;
+	--background-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Importing Font */
+@font-face {
+    font-family: 'Classic Console Neue';
+	src: url('fonts/ClassicConsoleNeue.eot');
+    src: url('fonts/clacon2.woff2') format('woff'),
+		 url('fonts;claclon2.ttf')  format('truetype'),
+		 url('fonts/ClassicConsoleNeue.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/ClassicConsoleNeue.svg#ClassicConsoleNeue') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+	background-color: var(--background-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.main {
+	/*Center Element*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border: 0.3em dashed var(--primary-color);
+	padding: 1.5em;
+	
+	/*Font Info*/
+	
+	font-family: 'Classic Console Neue';
+    font-weight: normal;
+    font-style: normal;
+	
+	color: var(--primary-color);
+}
+
+/* Title */
+.main .title {
+	font-size: 3em;
+	font-weight: bold;
+	letter-spacing: 0.4em;
+	text-align: center;
+	
+	
+	
+}
+
+/*List*/
+.main li{
+	list-style-type: none;
+	display: inline;
+	
+	float: left;
+	text-indent: 2em
+}
+
+
+/* Button | Link */
+.main button {
+	background-color: var(--background-color);
+	color: var(--primary-color);
+	opacity: 100%;
+	border: none;
+	outline: none;
+	font-family: 'Classic Console Neue';
+	font-size: 1.5em
+}
+
+.main  button:focus{
+	position: relative;
+	text-decoration: none;
+	
+}
+
+.main  button:focus::after{
+	font-family: 'Classic Console Neue';	
+	/*background-color: var(--primary-color);*/
+	
+	content: ">";
+	position: absolute;
+	left: -0.65em;
+	animation: animate 0.8s linear infinite;
+}
+
+/* Cursor Animation */
+@keyframes animate{
+   0%{
+     opacity: 0;
+   }
+   50%{
+     opacity: 1;
+   }
+   100%{
+     opacity: 0;
+   }
+ }
